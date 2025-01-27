@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
-#include "teclado.h"
+
+#include "teclado_lib.h"
 #include "buzzer.h"
 #include "matriz_led.h"
 
@@ -157,7 +158,6 @@ void analisaTeclaPressionada(int tecla){
 int main() {
   stdio_init_all();
   inicializacao();
-  
   
   //imprimeLEDs();
   

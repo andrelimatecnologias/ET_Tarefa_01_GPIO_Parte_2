@@ -6,6 +6,8 @@ set(CMAKE_C_STANDARD 11)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+
+
 # Initialise pico_sdk from installed location
 # (note this can come from environment, CMake cache etc)
 
@@ -35,7 +37,8 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(ET_Tarefa_01_GPIO_Parte_2 ET_Tarefa_01_GPIO_Parte_2.c )
+add_executable(ET_Tarefa_01_GPIO_Parte_2 ET_Tarefa_01_GPIO_Parte_2.c buzzer.c matriz_led.c teclado_lib.c)
+
 
 pico_set_program_name(ET_Tarefa_01_GPIO_Parte_2 "ET_Tarefa_01_GPIO_Parte_2")
 pico_set_program_version(ET_Tarefa_01_GPIO_Parte_2 "0.1")
@@ -51,7 +54,8 @@ target_link_libraries(ET_Tarefa_01_GPIO_Parte_2 PRIVATE
         pico_stdlib
         hardware_pio
         hardware_adc
-        pico_bootrom)
+        pico_bootrom
+        )
 
 # Add the standard include files to the build
 target_include_directories(ET_Tarefa_01_GPIO_Parte_2 PRIVATE

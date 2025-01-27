@@ -1,27 +1,8 @@
-#ifndef teclado_h
-#define teclado_h
-
+#include"teclado_lib.h"
 #include<stdio.h>
 #include"pico/stdlib.h"
 
 
-#define ASTERISTICO 13
-#define JOGO_DA_VELHA 14
-#define TECLA_A 10
-#define TECLA_B 11
-#define TECLA_C 12
-#define TECLA_D 15
-
-uint columns[4]; 
-uint rows[4];
-
-
-int TECLADO[16] = {
-    1, 2 , 3, 10,
-    4, 5 , 6, 11,
-    7, 8 , 9, 12,
-    13, 0 , 14, 15
-};
 
 void setColunasTeclado(uint c1,uint c2, uint c3, uint c4){
   columns[0] = c1;
@@ -72,5 +53,3 @@ int lerTeclado(){
   
   return row*4+col;
 }
-
-#endif
